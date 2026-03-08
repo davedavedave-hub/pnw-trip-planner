@@ -1,0 +1,141 @@
+.section {
+  background: linear-gradient(135deg, #1a2e1a 0%, #2d4a2d 50%, #1a2e1a 100%);
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0 L23 15 L20 12 L17 15 Z' fill='rgba(255,255,255,0.02)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.inner {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-tw-mist);
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-base);
+  color: rgba(168, 181, 160, 0.7);
+}
+
+.locations {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .locations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.locationCard {
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(168, 181, 160, 0.12);
+  transition: all var(--transition-base);
+}
+
+.locationCard:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.locationTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.locationName {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: #e0e8dc;
+}
+
+.inTripBadge {
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(168, 181, 160, 0.2);
+  color: var(--color-tw-mist);
+}
+
+.inTripBadgeActive {
+  background: var(--color-tw-moss);
+  color: #e0e8dc;
+}
+
+.movieRef {
+  font-size: var(--text-sm);
+  color: rgba(168, 181, 160, 0.8);
+  font-style: italic;
+  margin-bottom: var(--spacing-sm);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: rgba(168, 181, 160, 0.6);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-sm);
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+}
+
+.highlight {
+  font-size: var(--text-xs);
+  color: rgba(168, 181, 160, 0.7);
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.highlight::before {
+  content: '🌿';
+  font-size: 10px;
+}
+
+.tip {
+  margin-top: var(--spacing-sm);
+  font-size: var(--text-xs);
+  color: rgba(168, 181, 160, 0.5);
+  font-style: italic;
+}
